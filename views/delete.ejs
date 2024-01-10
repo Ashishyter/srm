@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Delete Student</title>
+    </head>
+
+    <body>
+        <nav><a href="/">Home</a><a href="/search">Search</a><a href="/update">Update</a><a href="/delete">Delete</a><a
+            href="/view">View</a></nav>
+
+        <div class="container">
+            <form action="/deletestudent" class="form">
+                <h2>Delete Student</h2>
+                <div class="form-control">
+                    <label for="username">Roll No.</label>
+
+                    <input type="text" name="rollno" value="" placeholder="Enter roll no" required />
+
+                </div>
+                <div class="form-control">
+                    <label for="password">Name</label>
+                    <input type="text" name="name" value="" placeholder="Enter name" required />
+
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" value="" placeholder="Enter email" required />
+
+                </div>
+                <div class="form-control">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" value="" placeholder="Enter address" required />
+
+                </div>
+
+                <button type="submit">Submit</button>
+                <% if(fresh){ %>
+                    <p id="not-found">Record Not Found...!</p>
+                    <a href="/">Back</a>
+                    <% } %>
+
+                    <% if(del){ %>
+                        <p id="found">Record Deleted...</p>
+                        <a href="/">Back</a>
+                        <% } %>
+
+
+
+
+            </form>
+        </div>
+
+    </body>
+
+</html>

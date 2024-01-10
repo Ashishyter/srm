@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="view.css">
+
+        <title>View Table</title>
+    </head>
+
+    <body>
+        <nav><a href="/">Home</a><a href="/search">Search</a><a href="/update">Update</a><a href="/delete">Delete</a><a
+                href="/view">View</a></nav>
+        <section>
+            <h1>STUDENT RECORDS</h1>
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                        <tr>
+                            <th>ROLLNO</th>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>ADDRESS</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <% result.forEach((item)=>{%>
+                            <tr>
+                                <td>
+                                    <%= item.rollno %>
+                                </td>
+                                <td>
+                                    <%= item.name %>
+                                </td>
+                                <td>
+                                    <%= item.email %>
+                                </td>
+                                <td>
+                                    <%= item.address %>
+                                </td>
+
+                            </tr>
+                            <%})%>
+                    <tbody>
+                </table>
+            </div>
+        </section>
+
+
+    </body>
+
+</html>
